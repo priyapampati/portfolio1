@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="background">
+	<div class="nav">
+		<a class="a active" href="#">Home</a>
+		<a class="b" href="#">About Me</a>
+		<a class="c" href="#">Gallery</a>
+		<a class="d" href="#">Contact Me</a>
+	</div>
+	<div class="content">
+		<div class="home">
+		<h1>Kushagra Agarwal</h1>
+		<h3>Undergraduate</h3>
+		</div>
+		<div class="aboutme">
+			<div class="text1">
+		<h1>about me</h1>
+	</div>
+			<p> Hello Reader, <br> <br>
+			I am an asshole and a 2nd year undergraduate at IIIT Guwahati pursuing B.Tech in Computer Science. <br>
+			<br>
+			I am a keen learner and I have an experience with Social Media Marketing and Management, Blogging, SEO, Adobe Illustrator, Adobe Photoshop. Lately I am involved in Android App Development and exploring this side of software development to enhance my skills in the IT industry.<br><br>
+		You can contact me if you would like to work on a project with me. </p>
+	</div>
+	<div class="gallery">
+		<div class="text1">
+		<h1>gallery</h1>
+	</div>
+		<div class="image">
+				<img src="Photos/1.jpg">
+			</div>
+			<div class="image">
+				<img src="Photos/2.jpg">
+			</div>
+			<div class="image">
+				<img src="Photos/3.jpg">
+			</div>
+			<div class="image">
+				<img src="Photos/4.jpg">
+			</div>
+			<div class="image">
+				<img src="Photos/5.jpg">
+			</div>
+			<div class="image">
+				<img src="Photos/7.jpg">
+			</div>
+			<div class="image">
+				<img src="Photos/8.jpg">
+			</div>
+			<div class="image">
+				<img src="Photos/6.jpg">
+			</div>
+			<div class="image">
+				<img src="Photos/9.jpg">
+			</div>
+		</div>
+		<div class="contactme">
+			<div class="contactform">
+				<form action="" method="post">
+					<input type="text" name="" class="inputtext" value="First Name">
+					<input type="text" name="" class="inputtext" value="Last Name">
+					<input type="email" name="" class="inputtext" value="Your Email">
+					<textarea cols="4" rows="6" class="inputmessage">Your Message</textarea>
+					<div>
+					<input type="button" name="" class="submitbutton" value="submit">
+				</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('a').click(function(){
+			//alert("i am click");
+			var selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+
+		var $a = $('.a'),
+		$b = $('.b'),
+		$c = $('.c'),
+		$d = $('.d'),
+		$home = $('.home'),
+		$aboutme = $('.aboutme'),
+		$gallery = $('.gallery'),
+		$contactme = $('.contactme');
+		$a.click(function(){
+			$home.fadeIn();
+			$aboutme.fadeOut();
+			$gallery.fadeOut();
+			$contactme.fadeOut();
+		});
+		$b.click(function(){
+			$aboutme.fadeIn();
+			$home.fadeOut();
+			$gallery.fadeOut();
+			$contactme.fadeOut();
+		
+		});
+		$c.click(function(){
+			$gallery.fadeIn();
+			$home.fadeOut();
+			$aboutme.fadeOut();
+			$contactme.fadeOut();
+		});
+		$d.click(function(){
+			$contactme.fadeIn();
+			$home.fadeOut();
+			$aboutme.fadeOut();
+			$gallery.fadeOut();
+		});
+	});
+</script>
+</body>
+</html>
